@@ -1,7 +1,7 @@
 {
   "name": "use-vue",
-  "version": "0.0.1",
-  "description": "Like `use vue` in Atom.",
+  "version": "1.0.0",
+  "description": "Declare 'use vue' in Atom as 'use babel'.",
   "main": "index.js",
   "scripts": {
     "test": "jshint index.js"
@@ -17,7 +17,11 @@
     "hook",
     "register",
     "loader",
-    "atom"
+    "atom",
+    "babel",
+    "coffee",
+    "typescript",
+    "less"
   ],
   "author": {
     "name": "lixinliang",
@@ -29,6 +33,7 @@
   },
   "dependencies": {
     "loophole": "^1.1.0",
+    "require-extension-vue": "^1.0.0",
     "vue": "^2.2.6"
   }
 }
