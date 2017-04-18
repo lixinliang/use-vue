@@ -5,6 +5,8 @@
 [![bitHound Code](https://www.bithound.io/github/lixinliang/use-vue/badges/code.svg)](https://www.bithound.io/github/lixinliang/use-vue)
 
 # use-vue
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/lixinliang/use-vue.svg)](https://greenkeeper.io/)
 > Declare `use vue` in Atom as `use babel`.
 
 ## Getting started
