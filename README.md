@@ -18,13 +18,9 @@ $ npm install --save use-vue
 
 ```js
 import 'use-vue';
-import Vue from 'vue/dist/vue';
 import app from './app.vue';
-import { allowUnsafeNewFunction } from 'loophole';
 
-allowUnsafeNewFunction(() => {
-    new Vue(app).$mount('app');
-});
+console.log(app);
 ```
 
 ## CSP
@@ -35,15 +31,51 @@ allowUnsafeNewFunction(() => {
 new Vue(app).$mount('app'); // CSP Error
 ```
 
-Use [loophole](https://www.npmjs.com/package/loophole) to avoid this problem.
+You can import `Vue` from `use-vue`.
 
 ```js
+import { Vue } from 'use-vue';
+import app from './app.vue';
+new Vue(app).$mount('app');
+```
+
+Or, use [loophole](https://www.npmjs.com/package/loophole) to avoid this problem.
+
+```js
+import 'use-vue';
+import Vur from 'vue'; // select the Vue version you want.
+import app from './app.vue';
 import { allowUnsafeNewFunction } from 'loophole';
 
 allowUnsafeNewFunction(() => {
     new Vue(app).$mount('app');
 });
 ```
+
+## Language
+
+As `Atom` default, support this following language,
+
+```vue
+<script lang="ts">
+    // code
+</script>
+
+<script lang="babel">
+    // code
+</script>
+
+<script lang="coffee">
+    // code
+</script>
+
+<style lang="less">
+    // code
+</style>
+```
+
+If you want to use any else, any language else, you can register yourself. [@see](https://github.com/lixinliang/require-extension-vue#loaderstyleregister)
+
 
 ## License
 
