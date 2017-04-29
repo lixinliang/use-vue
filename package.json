@@ -1,6 +1,6 @@
 {
   "name": "use-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Declare 'use vue' in Atom as 'use babel'.",
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "loophole": "^1.1.0",
-    "require-extension-vue": "^1.0.0",
+    "require-extension-vue": "^1.1.2",
     "vue": "^2.2.6"
   }
 }
