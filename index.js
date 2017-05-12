@@ -49,7 +49,7 @@ loader.script.register('coffee', ( content, filePath ) => {
 /**
  * register 'less', use <style lang="less"> in .vue file
  */
-loader.script.register('less', ( content, filePath ) => {
+loader.style.register('less', ( content, filePath ) => {
     return atom.themes.lessCache.cssForFile(filePath, content);
 });
 
