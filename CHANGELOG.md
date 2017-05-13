@@ -4,3 +4,7 @@
 ## 1.0.1
 * Update doc.
 * Update required module version.
+
+## 1.0.2
+* Fixed a bug. (https://github.com/lixinliang/use-vue/commit/307062ff75aacf630f6e1f1017becbe6508969ac)
+* `<style>` append in `<atom-styles>` instead of `<head>`.
