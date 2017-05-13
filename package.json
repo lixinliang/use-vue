@@ -1,6 +1,6 @@
 {
   "name": "use-vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Declare 'use vue' in Atom as 'use babel'.",
   "main": "index.js",
   "scripts": {
