@@ -7,7 +7,7 @@ import loader from 'require-extension-vue';
 import { allowUnsafeNewFunction } from 'loophole';
 
 /**
- * require Atom package
+ * Require Atom package
  * @param {String} packageName package name
  * @return {Any} export of package
  */
@@ -23,7 +23,7 @@ const COMPILERS = {
 };
 
 /**
- * register 'ts', use <script lang="ts"> in .vue file
+ * Register 'ts', use <script lang="ts"> in .vue file
  */
 loader.script.register('ts', ( content, filePath ) => {
     let compiler = COMPILERS.ts;
@@ -31,7 +31,7 @@ loader.script.register('ts', ( content, filePath ) => {
 });
 
 /**
- * register 'babel', use <script lang="babel"> in .vue file
+ * Register 'babel', use <script lang="babel"> in .vue file
  */
 loader.script.register('babel', ( content, filePath ) => {
     let compiler = COMPILERS.babel;
@@ -39,7 +39,7 @@ loader.script.register('babel', ( content, filePath ) => {
 });
 
 /**
- * register 'coffee', use <script lang="coffee"> in .vue file
+ * Register 'coffee', use <script lang="coffee"> in .vue file
  */
 loader.script.register('coffee', ( content, filePath ) => {
     let compiler = COMPILERS.coffee;
@@ -47,14 +47,25 @@ loader.script.register('coffee', ( content, filePath ) => {
 });
 
 /**
- * register 'less', use <style lang="less"> in .vue file
+ * Register 'less', use <style lang="less"> in .vue file
  */
 loader.style.register('less', ( content, filePath ) => {
     return atom.themes.lessCache.cssForFile(filePath, content);
 });
 
 /**
- * resolve Content Security Policy problem
+ * Append style in current place
+ */
+let atomStyles = document.querySelector('atom-styles');
+loader.style.exports(function ( style, { index, styles, filePath } ) {
+    style.setAttribute('source-path', filePath);
+    style.setAttribute('vue-style', index - 2);
+    style.setAttribute('priority', 0);
+    atomStyles.appendChild(style);
+});
+
+/**
+ * Resolve Content Security Policy problem
  */
 let $mount = Vue.prototype.$mount;
 Vue.prototype.$mount = function () {
