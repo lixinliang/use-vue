@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "jshint": "^2.9.4"
+    "jshint": "^2.10.3"
   },
   "dependencies": {
     "loophole": "^1.1.0",
