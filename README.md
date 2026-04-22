@@ -1,10 +1,6 @@
 [![npm](https://img.shields.io/npm/l/use-vue.svg)](https://www.npmjs.org/package/use-vue)
 [![npm](https://img.shields.io/npm/v/use-vue.svg)](https://www.npmjs.org/package/use-vue)
 [![npm](https://img.shields.io/npm/dm/use-vue.svg)](https://www.npmjs.org/package/use-vue)
-[![Travis CI](https://img.shields.io/travis/lixinliang/use-vue.svg)](https://travis-ci.org/lixinliang/muse-vue)
-[![bitHound Code](https://www.bithound.io/github/lixinliang/use-vue/badges/code.svg)](https://www.bithound.io/github/lixinliang/use-vue)
-[![Greenkeeper badge](https://badges.greenkeeper.io/lixinliang/use-vue.svg)](https://greenkeeper.io/)
-[![Twitter](https://img.shields.io/badge/twitter-@qq393464140-blue.svg)](http://twitter.com/qq393464140)
 
 # use-vue
 
